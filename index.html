@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <script src="main.js"></script>
+  <script src="ipsit.js"></script>
+
+
+  <style>
+    select,
+    .alert {
+      width: 300px;
+    }
+
+    table{
+      border: 4px solid #000;
+    }
+
+    td, th{
+      border: 4px solid rgb(235, 235, 235);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-6">
+        <form name="myForm">
+          <label for="ActionType">ActionType <span class="text-danger">*</span></label><br>
+          <select name="ActionType" class="select2" id="ActionType">
+            <option value="C">Commercial</option>
+            <option value="N">Non-Commercial</option>
+          </select>
+          <br><br>
+
+          <label for="ActionCode">ActionCode <span class="text-danger">*</span></label><br>
+          <select name="ActionCode" class="select2" id="ActionCode">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <br><br>
+
+          <label for="ProjectNo">ProjectNo <span class="text-danger">*</span></label><br>
+          <select name="ProjectNo" class="select2" id="ProjectNo">
+            <option value="D20C04">D20C04</option>
+            <option value="D20C07">D20C07</option>
+            <option value="D20C20">D20C20</option>
+            <option value="D21C21">D21C21</option>
+            <option value="D21C01">D21C01</option>
+            <option value="D20C16">D20C16</option>
+          </select>
+          <br><br>
+
+          <label for="BuildingCode">BuildingCode</label><br>
+          <select name="BuildingCode" class="select2" id="BuildingCode">
+            <option value="CTL">CTL</option>
+            <option value="SSR">SSR</option>
+            <option value="LLC">LLC</option>
+            <option value="ACC">ACC</option>
+            <option value="OCL">OCL</option>
+            <option value="PPB">PPB</option>
+          </select>
+          <br><br>
+
+          <label for="DrawingRevNo">DrawingRevNo</label><br>
+          <select name="DrawingRevNo" class="select2" id="DrawingRevNo">
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+          </select>
+          <br><br>
+
+          <div id="alert" class="alert alert-danger" role="alert"></div>
+
+          <button id="submit" class="btn btn-primary">Submit</button>
+          <button id="clear" class="btn btn-light" data-bs-toggle="tooltip" data-bs-toggle="tooltip"
+            title="It will clear BuildingCode & DrawingRevNo">clear</button>
+          <button id="clearAll" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-toggle="tooltip"
+            title="It will clear all data">Clear All</button>
+        </form>
+      </div>
+
+      <div class="col-6">
+        <table id="myTable" class="table table-dark table-hover">
+          <thead>
+            <th>Action Type</th>
+            <th>Action Code</th>
+            <th>Project No</th>
+            <th>Building No</th>
+            <th>Drawing Rev No</th>
+          </thead>
+          <tbody id="tbody">
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
